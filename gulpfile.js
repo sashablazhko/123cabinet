@@ -43,7 +43,7 @@ gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		// 'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
 		// 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
-		'node_modules/jquery/dist/jquery.js' // Берем jQuery
+		// 'node_modules/jquery/dist/jquery.js' // Берем jQuery
     // 'node_modules/bootstrap/dist/js/bootstrap.js'
 		// 'node_modules/slick-carousel/slick/slick.js'
 		])

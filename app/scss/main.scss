@@ -1,13 +1,15 @@
-//font-family: 'SFNSDisplay';
-//font-family: 'PatuaOne-Regular';
-//font-family: 'HelveticaReg';
+//font-family: 'Noto Sans', sans-serif;
 $ff-main-title: 'SFNSDisplay';
 $ff-title: 'PatuaOne-Regular';
 $ff-text: 'HelveticaReg';
 
-$second-color: #ff6161;
-$third-color: #4d60cc;
-$text-color: #2c2c2c;
+$second-color:rgb(136, 136, 136);
+$selected-color: rgb(38, 115, 194);
+$tab-color: rgb(254, 221, 0);
+$grey-color: whitesmoke;
+$grey-border: rgb(234, 234, 234);
+$close-color: rgb(254, 67, 108);
+$promo-color:  rgb(48, 66, 85);
 
 @mixin tag-item(){
 
@@ -22,9 +24,7 @@ $text-color: #2c2c2c;
 @import "fonts";
 
 body {
-  font-family: $ff-text;
-  font-size: 1rem;
-  line-height: 1.2;
+  background: rgb(242, 242, 242);
 }
 
 html {
@@ -38,6 +38,8 @@ html {
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 input, select, textarea{
@@ -54,9 +56,214 @@ input, select, textarea{
   }
 }
 
+// BASE GRID CONFIG (START)
+$break-point-full: 1300px;
+$break-point-desktop: 1000px;
+$break-point-tablet: 768px;
+$break-point-mobile: 375px;
+
+
+.container {
+  width: 1300px;
+  padding: 0 30px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+
+  .content-cnt {
+    height: 100%;
+  }
+
+  @media (min-width: 100px) and (max-width: $break-point-desktop) {
+    width: 100%;
+  }
+
+  @media (min-width: 100px) and (max-width: $break-point-tablet) {
+    padding: 0 20px;
+  }
+}  
+// BASE GRID CONFIG (END)
+
+
+// CHECKBOX (START)
+$transition: color 250ms ease-out;
+$ingredientColor: olivedrab;
+
+input[type=checkbox] {
+  display: none;
+  
+  & + label {
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  & + label::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.5em;
+    position: relative;
+    top: 0.125rem;
+    margin-right: 0.25em;
+    transition: $transition;
+    
+    font-weight: 400;
+    content: "\f0c8";
+    color: $grey-border;
+  }
+  
+  &:checked + label::before {
+    font-weight: 900;
+    content: "\f14a";
+    color: $selected-color;
+  }
+
+}
+
+///////////////////
+// Radio Styling //
+///////////////////
+
+input[type=radio] {
+  display: none;
+  
+  & + label {
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  & + label::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.5em;
+    position: relative;
+    top: 0.125rem;
+    margin-right: 0.25em;
+    transition: $transition;
+    
+    font-weight: 400;
+    content: "\f111";
+    color: $grey-border;
+  }
+  
+  &:checked + label::before {
+    font-weight: 900;
+    content: "\f192";
+    color: $selected-color;
+  }
+}
+// CHECKBOX (END)
+
+.cabinet{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: black;
+  box-sizing: border-box;
+
+  &__head{
+    padding: 20px 0;
+
+    .title{
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .cont{
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+    .info{
+      display: flex;
+      align-items: center;
+
+      &__fio{
+        margin-right: 10px;
+
+        &__btn{
+          background-color: #fff;
+          border: 1px solid $grey-border;
+          width: 300px;
+
+          .dropdown__fio {
+            position: relative;
+
+            i{
+              position: absolute;
+              right: 20px;
+              top: calc(50% - 7px);
+              pointer-events: none;
+            }
+          }
+          .dropdown__fio.open {
+
+            i{
+              transform: rotate(180deg);
+            }
+          }
+          
+          .dropdown__fio > .caption {
+            background-color: #fff;
+            padding: 13px 20px 13px 17px;
+            font-weight: 700;
+            cursor: pointer;
+            
+          }
+          
+          .dropdown__fio > .list {
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            display: none;
+            outline: 1px solid $grey-border;
+          }
+          
+          .dropdown__fio > .list > .item {
+            padding: 13px 17px;
+            cursor: pointer;
+          }
+          
+          .dropdown__fio > .list > .item.selected {
+            font-weight: bold;
+          }
+          
+          .dropdown__fio.open > .list {
+            display: block;
+          }
+        }
+      }
+      &__data{
+        margin-left: 20px;
+
+        &__bold{
+          font-weight: bold;
+        }
+      }
+    }
+
+    .quit{
+      font-size: 13px;
+      font-weight: bold;
+      align-self: center;
+
+      &__btn{
+        color: $selected-color;
+        text-decoration: none;
+        padding-left: 5px;
+
+        &:before {
+          content: url(../img/quit.svg);
+          width: 20px;
+          float: left;
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+
+  &__container{
+    display: flex;
+  }
+  
+}
 
 @import "responsive";
-
-body{
-  background-color: $second-color;
-}
