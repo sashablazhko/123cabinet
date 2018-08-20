@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/libs.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="libs/jquery.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<section id="main-product">
+	<div class="container">
+		<div class="content-cnt">
+			<div class="cabinet">
+
+				<div class="cabinet__head">
+					<div class="title">
+							Личный кабинет покупателя
+					</div>
+					<div class="cont">
+						<div class="info">
+							<div class="info__fio">
+								<div class="info__fio__btn">
+									<div class="dropdown__fio">
+										<div class="caption">Плешаков Сергей</div>
+										<div class="list">
+											<div class="item">Плешаков Сергей</div>
+										</div>
+										<i class="fas fa-angle-down"></i>
+									</div>
+								</div>
+							</div>
+							<div class="info__data">
+								<span class="info__data__bold">ID:</span> 9752124
+							</div>
+							<div class="info__data">
+								У вас <span class="info__data__bold">9056</span> баллов
+							</div>
+						</div>
+						<div class="quit">
+							 <a href="#" class="quit__btn">выйти</a> 
+						</div>
+					</div>
+				</div>
+
+				<div class="cabinet__container">
+					<div class="sidemenu">
+						<div class="height">
+							menu
+
+						</div>
+						<!-- <div class="dropdownsm">
+							<div class="caption">Select</div>
+							<div class="list">
+								<div class="item">Option 1</div>
+								<div class="item">Option 2</div>
+								<div class="item">Option 3</div>
+								<div class="item">Option 4</div>
+								<div class="item">Option 5</div>
+							</div>
+						</div> -->
+					</div>
+					<div class="content">
+						<div class="yurlicofull">
+
+							<div class="row inp">
+								<label class="labelfull" for="organization">
+									<div class="labelfull__left">
+										Название организации с формой собственности <span class="bold blue">*</span>
+									</div>
+									<div class="labelfull__right">
+										Например, ООО “Рога и копыта”
+									</div>
+								</label>
+								<input id="organization" placeholder="Введите полное наименование"></input>
+							</div>
+							<div class="row label-mb">
+								<label for="goods">Наименование грузополучателя <span class="bold blue">*</span></label>
+								<div class="flex-wrap">
+									<div class="input-wrap">
+										<input id="goods" placeholder="Введите наименование"></input>
+									</div>
+									<div class="checkbox-wrap">
+										<label class="customchb" for="checkbox-6">
+											<input id="checkbox-6" type="checkbox" checked>
+											<span class="checkbox"></span>
+											<span class="text">Наименование грузополучателя и плательщика совпадают</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row inp">
+								<label for="urcity">Юридический адрес <span class="bold blue">*</span></label>
+								<input id="urcity" placeholder="Введите название населенного пункта"></input>
+							</div>
+							<div class="row list">
+								<div class="item item__long">
+									<input placeholder="Улица"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Дом"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Офис"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Индекс"></input>
+								</div>
+							</div>
+							<div class="row inp">
+								<label for="fizcity">Физический адрес <span class="bold blue">*</span></label>
+								<input id="fizcity" placeholder="Введите название населенного пункта"></input>
+							</div>
+							<div class="row list">
+								<div class="item item__long">
+									<input placeholder="Улица"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Дом"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Офис"></input>
+								</div>
+								<div class="item item__short">
+									<input placeholder="Индекс"></input>
+								</div>
+								<div class="checkbox-wrap">
+									<label class="customchb" for="checkbox-7">
+										<input id="checkbox-7" type="checkbox" checked>
+										<span class="checkbox"></span>
+										<span class="text">Физический и юридический адреса совпадают</span>
+									</label>
+								</div>
+							</div>
+							<div class="row inp">
+								<label for="phoneyrfull">Телефон <span class="bold blue">*</span></label>
+								<input id="phoneyrfull" placeholder="Введите телефон"></input>
+							</div>
+							<div class="row inp">
+								<label for="mailyrfull">Электронная почта</label>
+								<input id="mailyrfull" placeholder="Введите почту"></input>
+							</div>
+							<div class="row inp">
+								<label for="innyrfull">ИНН <span class="bold blue star">*</span></label>
+								<input id="innyrfull" placeholder="Введите ИНН"></input>
+							</div>
+							<div class="row inp">
+								<label for="kppyrfull">КПП <span class="bold blue star">*</span></label>
+								<input id="kppyrfull" placeholder="Введите КПП"></input>
+							</div>
+							<div class="row inp">
+								<label for="bankyrfull">Название банка</label>
+								<input id="bankyrfull" placeholder="Введите название банка (необязательно)"></input>
+							</div>
+							<div class="row inp">
+								<label for="bikyrfull">БИК</label>
+								<input id="bikyrfull" placeholder="Введите БИК (необязательно)"></input>
+							</div>
+							<div class="row inp">
+								<label for="account1yrfull">Корреспондентский счет</label>
+								<input id="account1yrfull" placeholder="Введите корреспондентский счет (необязательно)"></input>
+							</div>
+							<div class="row inp">
+								<label for="account2yrfull">Расчетный счет</label>
+								<input id="account2yrfull" placeholder="Введите расчетный счет (необязательно)"></input>
+							</div>
+							<div class="foot">
+								<button class="btn">Сохранить</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="js/libs.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

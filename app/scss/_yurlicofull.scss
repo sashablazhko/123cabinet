@@ -1,0 +1,130 @@
+.row{
+  font-size: 13px;
+  color: rgb(64,64,64);
+  margin-bottom: 20px;
+}
+
+& .inp{
+
+  & label{
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+  & .labelfull{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__right{
+      font-size: 11px;
+      color: $second-color;
+    }
+  }
+
+  & input{
+    display: block;
+    width: 100%;
+    color: #000;
+    padding: 13px 20px;
+
+    clear: both;
+    outline: 0;
+    background: $bg-color;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $grey-border;
+  }
+}
+.label-mb{
+  & > label{
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+}
+& .flex-wrap{
+  display: flex;
+  align-items: center;
+
+  .input-wrap{
+    width: 46%;
+    flex-shrink: 0;
+    margin-right: 20px;
+
+    & label{
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+  
+    & input{
+      display: block;
+      width: 100%;
+      color: #000;
+      padding: 13px 20px;
+  
+      clear: both;
+      outline: 0;
+      background: $bg-color;
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid $grey-border;
+    }
+  }
+}
+    .checkbox-wrap{
+  
+      label.customchb .checkbox {
+        top: calc(50% - 14px);
+      }
+    }
+& .list{
+  display: flex;
+  align-items: center;
+
+  & .item{
+    margin-right: 20px;
+
+    &__long{
+      width: 186px;
+      flex-shrink: 0;
+    }
+    &__short{
+
+      &:nth-child(2){
+        width: 68px;
+        flex-shrink: 0;
+      }
+      &:nth-child(3){
+        width: 76px;
+        flex-shrink: 0;
+      }
+      &:nth-child(4){
+        width: 87px;
+        flex-shrink: 0;
+      }
+    }
+    
+    & input{
+      display: block;
+      width: 100%;
+      color: #000;
+      padding: 13px 20px;
+  
+      clear: both;
+      outline: 0;
+      background: $bg-color;
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid $grey-border;
+    }
+  }
+
+}
+.foot{
+  display: flex;
+  flex-direction: row-reverse;
+
+  .btn{
+    border: none;
+    @include btn();
+  }
+}

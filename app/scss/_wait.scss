@@ -1,0 +1,178 @@
+.name{
+  font-size: 17px;
+  font-weight: 700;
+  color: $selected-color;
+  padding-left: 15px;
+  padding-top: 17px;
+}
+.subtit{
+  font-size: 15px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+}
+.item{
+  width: calc(25% - 15px);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  position: relative;
+  transition: all .25s ease-in-out;
+  padding: 20px 21px;
+
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    i{
+      color: $close-color;
+    }
+  }
+
+  a{
+    color: black;
+  }
+
+  &__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 138px;
+
+    img{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  &__name{
+    font-size: 11px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 7px;
+    height: 30px;
+    max-height: 30px;
+    overflow: hidden;
+  }
+  & .prod__rate {
+    font-size: 9px;
+  }
+  &__rate {
+    margin-top: 5px;
+
+    .sp-inline-rating{
+      min-height: 17px;
+    }
+    .sp-listing-inline-rating-widget {
+      font-size: 11px;
+      display: flex;
+    }
+    .sp-listing-inline-rating-widget .sp-inline-rating-stars {
+      height: 14px;
+      display: inline-block;
+    }
+    .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-half, .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-off, .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-on {
+      display: inline-block;
+      min-width: 14px;
+      min-height: 14px;
+      background-size: 14px 14px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-on {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpdD0nJyBoZWlnaHQ9JzEwMCUnIHdpZHRoPScxMDAlJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCBtZWV0JyB2aWV3Qm94PScwIDAgMjQgMjQnPjxwYXRoIGZpbGw9JyNGQURENEEnIGQ9J00xMiAxOGwtNy4wNTMgMy43MDggMS4zNDctNy44NTRMLjU4NyA4LjI5Mmw3Ljg4Ni0xLjE0NkwxMiAwbDMuNTI3IDcuMTQ2IDcuODg2IDEuMTQ2LTUuNzA3IDUuNTYyIDEuMzQ3IDcuODU0eicgZmlsbC1ydWxlPSdldmVub2RkJy8+PC9zdmc+);
+    }
+    .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-off {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpdD0nJyBoZWlnaHQ9JzEwMCUnIHdpZHRoPScxMDAlJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCBtZWV0JyB2aWV3Qm94PScwIDAgMjQgMjQnPjxwYXRoIGZpbGw9JyM5QjlCOUInIGQ9J00xMiAxOGwtNy4wNTMgMy43MDggMS4zNDctNy44NTRMLjU4NyA4LjI5Mmw3Ljg4Ni0xLjE0NkwxMiAwbDMuNTI3IDcuMTQ2IDcuODg2IDEuMTQ2LTUuNzA3IDUuNTYyIDEuMzQ3IDcuODU0eicgZmlsbC1ydWxlPSdldmVub2RkJyBmaWxsLW9wYWNpdHk9Jy40OTUnLz48L3N2Zz4=);
+    }
+    .sp-listing-inline-rating-widget .sp-inline-rating-stars .sp-star-off:not(:first-child){
+      margin-left: 1.75px;
+    }
+    & .amount{
+      display: inline-block;
+      color: $selected-color;
+      margin-left: 1.75px;
+    }
+  }
+  &__price{
+    line-height: 26px;
+
+    &-new-price {
+      margin-top: 6px;
+
+      span{
+        font-size: 25px;
+        display: inline-block;
+        letter-spacing: -.4px;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .currency{
+        margin-left: 6px;
+      }
+    }
+  }
+  &__add-cart{
+    margin-top: 11px;
+
+    .standart-btn{
+      background: #fff;
+      cursor: pointer;
+      border: 2px solid $selected-color;
+      outline: 0;
+      width: 100%;
+      padding: 0 16px;
+      line-height: 31px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      &:hover span{
+        color: #000;
+      }
+      &:hover svg g {
+        stroke: #000;
+    }
+
+      svg{
+        margin-right: 10px;
+      }
+      span{
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 700;
+        font-size: 13px;
+        white-space: nowrap;
+        color: $selected-color;
+      }
+    }
+    .add-to-cart {
+      background: #fff;
+      width: 100%;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 0;
+      border: 2px solid #2573c2;
+      color: #2573c2;
+
+    }
+    .add-to-cart:hover{
+      border: 2px solid $tab-color;
+      background: $tab-color;
+      text-decoration: none;
+    }
+  }
+}

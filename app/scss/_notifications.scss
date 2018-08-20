@@ -1,0 +1,50 @@
+.name{
+  font-size: 17px;
+  font-weight: 700;
+  color: $selected-color;
+  padding-top: 17px;
+}
+.subtit{
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+& .list{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 16px;
+  color: $grey-text;
+}
+.item{
+  width: 50%;
+  min-height: 30px;
+  margin-bottom: 14px;
+  padding-right: 15px;
+}
+
+&__foot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left{
+    font-size: 13px;
+    line-height: 16px;
+    color: $grey-text;
+
+    label.customchb .checkbox {
+      top: calc(50% - 14px);
+    }
+    label.customchb input[type="checkbox"]:checked ~ .checkbox {
+      background-color: rgba(38, 115, 194, 0.5);
+    }
+    a{
+      color: $selected-color;
+    }
+  }
+
+  .btn{
+    @include btn();
+    border: none;
+  }
+}

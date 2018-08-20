@@ -1,0 +1,235 @@
+.info{
+  border: 1px solid $grey-border;
+  border-radius: 5px;
+  padding: 17px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 35px;
+
+  .close{
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 8px);
+
+    i{
+      color: $close-color;
+    }
+  }
+
+  &__cont{
+    padding: 0 34px;
+    line-height: 20px;
+
+    .title{
+      margin-bottom: 5px;
+    }
+    .default{
+      color: $second-color;
+      font-weight: 400;
+    }
+  }
+  &__btn{
+    
+    a{
+      @include btn();
+    }
+  }
+}
+
+.form-wrap{
+  padding: 0 20px;
+}
+.form{
+  position: relative;
+}
+.row{
+  font-size: 13px;
+  color: rgb(64,64,64);
+  margin-bottom: 20px;
+}
+& .city{
+  background-color: transparent;
+
+  &__text{
+    margin-bottom: 9px;
+  }
+
+  &__sel{
+    border: 1px solid $grey-border;
+  }
+  
+  .dropdowncity {
+    position: relative;
+
+    i{
+      position: absolute;
+      right: 20px;
+      top: calc(50% - 7px);
+      pointer-events: none;
+    }
+  }
+  .dropdowncity.open {
+
+    i{
+      transform: rotate(180deg);
+    }
+  }
+  
+  .dropdowncity > .caption {
+    background-color: $bg-color;
+    padding: 13px 28px 13px 20px;
+    color: $second-color;
+    cursor: pointer;
+  }
+  .dropdowncity > .caption__selected {
+    color: #000;
+  }
+  
+  .dropdowncity > .list {
+    position: absolute;
+    background-color: $bg-color;
+    width: 100%;
+    outline: 1px solid $grey-border;
+    display: none;
+  }
+  
+  .dropdowncity > .list > .item {
+    padding: 13px 28px 13px 20px;
+    cursor: pointer;
+  }
+  
+  .dropdowncity > .list > .item.selected {
+    font-weight: bold;
+  }
+  
+  .dropdowncity > .caption:hover,
+  .dropdowncity > .list > .item:hover {
+
+  }
+  
+  .dropdowncity.open > .caption {
+
+  }
+  
+  .dropdowncity.open > .list {
+    display: block;
+  }
+}
+
+& .inp{
+
+  & label{
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+
+  & input{
+    display: block;
+    width: 100%;
+    color: #000;
+    padding: 13px 20px;
+
+    clear: both;
+    outline: 0;
+    background: $bg-color;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $grey-border;
+  }
+}
+
+& .list{
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  
+  & .item{
+    margin-right: 20px;
+    width: calc(16.66% - 20px);
+    // width: 50px;
+
+    & label{
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+  
+    & input{
+      display: block;
+      width: 100%;
+      color: #000;
+      padding: 13px 20px;
+  
+      clear: both;
+      outline: 0;
+      background: $bg-color;
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid $grey-border;
+    }
+  }
+
+  &__phone{
+    align-items: flex-end;
+
+    & .item{
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+& .txt{
+  margin-bottom: 37px;
+
+  & label{
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+
+  & textarea{
+    display: block;
+    width: 100%;
+    height: 80px;
+    color: #000;
+    padding: 13px 20px;
+
+    clear: both;
+    outline: 0;
+    background: $bg-color;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $grey-border;
+  }
+}
+
+& .foot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left{
+    color: rgb(64, 64, 64);
+    position: relative;
+    font-size: 13px;
+    line-height: 16px;
+
+    & .text__lines{
+      display: inline-block;
+    }
+    & label.customchb .checkbox {
+      top: 2px;
+    }
+    
+  }
+  &__right{
+     
+    button{
+      @include btn();
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

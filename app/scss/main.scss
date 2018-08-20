@@ -7,10 +7,24 @@ $second-color:rgb(136, 136, 136);
 $selected-color: rgb(38, 115, 194);
 $tab-color: rgb(254, 221, 0);
 $grey-color: whitesmoke;
+$grey-text: rgb(64, 64, 64);
 $grey-border: rgb(234, 234, 234);
+$bg-color: #f5f5f5;
 $close-color: rgb(254, 67, 108);
 $promo-color:  rgb(48, 66, 85);
 
+@mixin btn(){
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 30px;
+  background-color: $selected-color;
+
+  &:hover{
+    background: #1653ab;
+  }
+}
 @mixin tag-item(){
 
 }
@@ -34,17 +48,26 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+*{
+  min-height: 0;
+  min-width: 0;
+  }
 
 ul,
 ol {
+  list-style: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 input, select, textarea{
   color: $second-color;
-  font-family: $ff-main-title;
+  font-family: inherit;
 }
 
 .clearfix {
@@ -85,39 +108,102 @@ $break-point-mobile: 375px;
 }  
 // BASE GRID CONFIG (END)
 
+// new CHECKBOX styling (start)
+$inputBg: #FFFFFF;
+$inputText: #747474;
+$bg-1: #E3E0DD;
+$bg-2: #EEE5DA;
 
+/*
+ * Plugin style
+ */
+
+label.customchb {
+  position: relative;
+  padding-left: 37px;
+  // overflow: hidden;
+  display: inline-block;
+	cursor: pointer;
+	
+	.text {
+		user-select: none;
+	}
+	
+	//Hide standard checkbox
+	input[type="checkbox"] {
+		display:none;
+	}
+
+	//Style new checkbox
+	.checkbox {
+		display: block;
+		position: absolute;
+		top: -5px;
+		left: 0px;
+		width: 28px;
+		height: 28px;
+    border: 1px solid $grey-border;
+    background-color: $bg-color;
+		
+		&:before {
+			display: block;
+			content: "";
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			width: 30%;
+			height: 60%;
+			border-width: 0px 3px 3px 0px;
+			border-style: solid;
+			border-color: $grey-border;
+			transform: translate( -50%, -50% ) rotate( 45deg ) scale( 0 ) translateZ(0);
+			transition: all 150ms ease;
+			will-change: transform;
+		}
+	}
+
+	//Marking css for new checkbox
+	input[type="checkbox"]:checked ~ .checkbox {
+		background-color: $selected-color;
+	} 
+	input[type="checkbox"]:checked ~ .checkbox:before {
+		transform: translate( -50%, -50% ) rotate( 45deg ) scale( 1 ) translateZ(0);
+		border-color: #fff;
+	} 
+}
+// new CHECKBOX styling (end)
 // CHECKBOX (START)
 $transition: color 250ms ease-out;
 $ingredientColor: olivedrab;
 
-input[type=checkbox] {
-  display: none;
+// input[type=checkbox] {
+//   display: none;
   
-  & + label {
-    user-select: none;
-    cursor: pointer;
-  }
+//   & + label {
+//     user-select: none;
+//     cursor: pointer;
+//   }
   
-  & + label::before {
-    font-family: "Font Awesome 5 Free";
-    font-size: 1.5em;
-    position: relative;
-    top: 0.125rem;
-    margin-right: 0.25em;
-    transition: $transition;
+//   & + label::before {
+//     font-family: "Font Awesome 5 Free";
+//     font-size: 1.5em;
+//     position: relative;
+//     top: 0.125rem;
+//     margin-right: 0.25em;
+//     transition: $transition;
     
-    font-weight: 400;
-    content: "\f0c8";
-    color: $grey-border;
-  }
+//     font-weight: 400;
+//     content: "\f0c8";
+//     color: $grey-border;
+//   }
   
-  &:checked + label::before {
-    font-weight: 900;
-    content: "\f14a";
-    color: $selected-color;
-  }
+//   &:checked + label::before {
+//     font-weight: 900;
+//     content: "\f14a";
+//     color: $selected-color;
+//   }
 
-}
+// }
 
 ///////////////////
 // Radio Styling //
@@ -159,6 +245,16 @@ input[type=radio] {
   color: black;
   box-sizing: border-box;
 
+  .bold{
+    font-weight: 700;
+  }
+  .blue{
+    color: $selected-color;
+  }
+  .gray{
+    color: $second-color;
+  }
+
   &__head{
     padding: 20px 0;
 
@@ -183,6 +279,7 @@ input[type=radio] {
           background-color: #fff;
           border: 1px solid $grey-border;
           width: 300px;
+          margin-left: -1px;
 
           .dropdown__fio {
             position: relative;
@@ -262,6 +359,111 @@ input[type=radio] {
 
   &__container{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .sidemenu{
+      width: 298px;
+      background-color: #fff;
+      flex-shrink: 0;
+      margin-right: 15px;
+      
+      // .dropdownsm {
+      //   position: relative;
+      // }
+      
+      // .dropdownsm > .caption {
+      //   background-color: #f2f2f2;
+      //   padding: 11px 24px;
+      //   border-radius: 3px;
+      //   cursor: pointer;
+      // }
+      
+      // .dropdownsm > .list {
+      //   position: absolute;
+      //   background-color: #f2f2f2;
+      //   width: 100%;
+      //   border-radius: 0 0 3px 3px;
+      //   display: none;
+      // }
+      
+      // .dropdownsm > .list > .item {
+      //   padding: 11px 24px;
+      //   cursor: pointer;
+      // }
+      
+      // .dropdownsm > .list > .item.selected {
+      //   font-weight: bold;
+      // }
+      
+      // .dropdownsm > .caption:hover,
+      // .dropdownsm > .list > .item:hover {
+      //   background-color: rgb(83, 161, 214);
+      //   color: #fff;
+      // }
+      
+      // .dropdownsm.open > .caption {
+      //   border-radius: 3px 3px 0 0;
+      //   border-bottom: solid 1px #999;
+      // }
+      
+      // .dropdownsm.open > .list {
+      //   display: block;
+      // }
+    }
+    .content{
+      flex-grow: 1;
+
+      .wait{
+        @import "wait";
+      }
+      .status{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "status";
+      }
+      .warranty{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "warranty";
+      }
+      .addr{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "addr";
+      }
+      & .notifications{
+        background-color: #fff;
+        padding: 25px 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @import "notifications";
+      }
+      & .yurlico{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "yurlico";
+      }
+      & .yurlicofull{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "yurlicofull";
+      }
+      & .password{
+        background-color: #fff;
+        padding: 25px 50px;
+
+        @import "password";
+      }
+    }
   }
   
 }

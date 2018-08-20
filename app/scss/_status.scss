@@ -1,0 +1,43 @@
+.title{
+  display: inline-block;
+  background-color: $tab-color;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px;
+}
+.name{
+  font-size: 17px;
+  font-weight: 700;
+  color: $selected-color;
+  padding-top: 17px;
+}
+.subtit{
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+.calc{
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+.list{
+  list-style: none;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+
+  &:nth-child(2n+1){
+    background-color: #f5f5f5;
+  }
+
+  .text{
+    color: $second-color;
+  }
+  .data{
+    font-weight: 700;
+    width: 28%;
+    min-width: 79px;
+    flex-shrink: 0;
+  }
+}

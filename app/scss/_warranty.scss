@@ -1,0 +1,97 @@
+.title{
+  display: inline-block;
+  background-color: $tab-color;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.serial{
+  position: relative;
+  margin-bottom: 20px;
+
+  label{
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/icon_search.png) no-repeat;
+    left: 20px;
+    top: 14px;
+    position: absolute;
+    text-indent: -9999px;
+  }
+
+  input{
+    font-size: 15px;
+    line-height: 20px;
+    clear: both;
+    outline: 0;
+    background: #f5f5f5;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #eaeaea;
+    padding: 12px 12px 12px 53px;
+    color: #000;
+
+    &::-webkit-input-placeholder {
+      font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    }
+    
+    &:-ms-input-placeholder {
+      font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    }
+    
+    &:-moz-placeholder {
+      font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    }
+    
+    &::-moz-placeholder {
+      font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    }
+  }
+}
+p{
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.item{
+  width: 50%;
+  flex-shrink: 0;
+  margin-bottom: 11px;
+}
+.link{
+  display: flex;
+  align-items: center;
+
+  &__ico{
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+  }
+  &__text{
+    font-size: 13px;
+    line-height: 16px;
+    color: $selected-color;
+  }
+}
+.item:nth-child(1) .link__ico{
+  background: url(../img/warranty1.svg) center center no-repeat;
+  background-size: contain;
+}
+.item:nth-child(2) .link__ico{
+  background: url(../img/warranty2.svg) center center no-repeat;
+  background-size: contain;
+}
+.item:nth-child(3) .link__ico{
+  background: url(../img/warranty3.svg) center center no-repeat;
+  background-size: contain;
+}
+.item:nth-child(4) .link__ico{
+  background: url(../img/warranty4.svg) center center no-repeat;
+  background-size: contain;
+}

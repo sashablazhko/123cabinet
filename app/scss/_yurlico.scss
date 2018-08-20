@@ -1,0 +1,40 @@
+.row{
+  font-size: 13px;
+  color: rgb(64,64,64);
+  margin-bottom: 20px;
+}
+
+& .inp{
+
+  & .star{
+
+  }
+
+  & label{
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+
+  & input{
+    display: block;
+    width: 100%;
+    color: #000;
+    padding: 13px 20px;
+
+    clear: both;
+    outline: 0;
+    background: $bg-color;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $grey-border;
+  }
+}
+.foot{
+  display: flex;
+  flex-direction: row-reverse;
+
+  .btn{
+    border: none;
+    @include btn();
+  }
+}
